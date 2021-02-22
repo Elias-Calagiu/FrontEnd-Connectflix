@@ -7,10 +7,10 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <Link className="navbar-brand" to="/">
-        Pupster
+        ConnectFlix
       </Link>
       <div>
-        <ul className="navbar-nav">
+        {/* <ul className="navbar-nav">
           <li className="nav-item">
             <Link
               to="/"
@@ -39,7 +39,7 @@ function Navbar() {
               Search
             </Link>
           </li>
-        </ul>
+        </ul> */}
       </div>
     </nav>
   );
