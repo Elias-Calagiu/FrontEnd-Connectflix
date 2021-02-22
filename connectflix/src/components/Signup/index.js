@@ -24,7 +24,7 @@ function Login(props) {
         //   password="password"
           type="text"
           className="form-control"
-          placeholder="username"
+          placeholder="password"
           id="password"
         />
         <input
