@@ -3,8 +3,8 @@ import "./style.css";
 
 function Login(props) {
   return (
-    <div className="hero text-center" style={{ backgroundImage: `url(${props.backgroundImage})` }}>
-      {props.children}
+    <div>
+        <form className="login-form"
     </div>
   );
 }
