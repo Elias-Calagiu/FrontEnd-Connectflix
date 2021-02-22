@@ -31,6 +31,9 @@ function Login(props) {
           Login
         </button>
       </div>
+      <h6 class="my-mt-4">Need an Account?
+        <a class="my-tc1" href="/signup">Sign Up</a>
+      </h6>
         </form>
     </div>
   );
