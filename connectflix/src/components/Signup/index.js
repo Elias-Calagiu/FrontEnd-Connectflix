@@ -27,13 +27,40 @@ function Login(props) {
           placeholder="username"
           id="password"
         />
+        <input
+          value={props.search}
+          onChange={props.handleInputChange}
+          firstName="first-name"
+        //   password="password"
+          type="text"
+          className="form-control"
+          placeholder="username"
+          id="first-name"
+        />
+        <input
+          value={props.search}
+          onChange={props.handleInputChange}
+          lastName="last-name"
+        //   password="password"
+          type="text"
+          className="form-control"
+          placeholder="username"
+          id="last-name"
+        />
+        <input
+          value={props.search}
+          onChange={props.handleInputChange}
+          email="email"
+        //   password="password"
+          type="text"
+          className="form-control"
+          placeholder="email"
+          id="email"
+        />
         <button type="submit" onClick={props.handleFormSubmit} className="btn btn-success">
           Login
         </button>
       </div>
-      <h6 class="my-mt-4">Need an Account?
-        <a class="my-tc1" href="/signup">Sign Up</a>
-      </h6>
         </form>
     </div>
   );
