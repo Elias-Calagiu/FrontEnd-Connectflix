@@ -1,15 +1,22 @@
-import React from "react";
+
 import "./style.css";
 
-function Login(props) {
-  return (
-    <div>
-        <form className="login-form">
+import React, { Component } from 'react'
+
+export default class Signup extends Component {
+  constructor(props){
+    super(props)
+  }
+  // event handler method code goes here
+  render() {
+    return (
+      <div>
+         <form className="login-form">
         <div className="form-group">
-        <label >Login:</label>
+        <label >Signup:</label>
         <input
-          value={props.search}
-          onChange={props.handleInputChange}
+          value={this.props.search}
+          onChange={this.props.handleInputChange}
           username="username"
         //   password="password"
           type="text"
@@ -18,8 +25,8 @@ function Login(props) {
           id="username"
         />
         <input
-          value={props.search}
-          onChange={props.handleInputChange}
+          value={this.props.search}
+          onChange={this.props.handleInputChange}
           password="password"
         //   password="password"
           type="text"
@@ -28,28 +35,28 @@ function Login(props) {
           id="password"
         />
         <input
-          value={props.search}
-          onChange={props.handleInputChange}
+          value={this.props.search}
+          onChange={this.props.handleInputChange}
           firstName="first-name"
         //   password="password"
           type="text"
           className="form-control"
-          placeholder="username"
+          placeholder="First Name"
           id="first-name"
         />
         <input
-          value={props.search}
-          onChange={props.handleInputChange}
+          value={this.props.search}
+          onChange={this.props.handleInputChange}
           lastName="last-name"
         //   password="password"
           type="text"
           className="form-control"
-          placeholder="username"
+          placeholder="Last Name"
           id="last-name"
         />
         <input
-          value={props.search}
-          onChange={props.handleInputChange}
+          value={this.props.search}
+          onChange={this.props.handleInputChange}
           email="email"
         //   password="password"
           type="text"
@@ -57,13 +64,17 @@ function Login(props) {
           placeholder="email"
           id="email"
         />
-        <button type="submit" onClick={props.handleFormSubmit} className="btn btn-success">
+        <button type="submit" onClick={this.props.handleFormSubmit} className="btn btn-success">
           Login
         </button>
       </div>
+        {/* <button type="submit" onClick={this.props.handleFormSubmit} className="btn btn-success">
+          Login
+        </button> */}
         </form>
-    </div>
-  );
+      </div>
+    )
+  }
 }
 
-export default Login;
+
