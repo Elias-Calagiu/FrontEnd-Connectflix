@@ -54,15 +54,14 @@ handleInputChange(event) {
           id="password"
         />
 
-ReactDOM.render(
+
   <>
     <Button type="primary" onClick={this.props.handleFormSubmit}>Login</Button>
-  </>,
-  mountNode,
-);
-        <button type="submit" onClick={this.props.handleFormSubmit} className="btn btn-success">
+  </>
+
+        {/* <button type="submit" onClick={this.props.handleFormSubmit} className="btn btn-success">
           Login
-        </button>
+        </button> */}
       </div>
       <h6 class="my-mt-4">Need an Account?
         <a class="my-tc1" href="/signup">Sign Up</a>
