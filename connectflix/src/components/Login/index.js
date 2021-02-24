@@ -1,6 +1,7 @@
 // import React from "react";
+import axios from "axios"
 import "./style.css";
-
+import { Button } from 'antd';
 import React, { Component } from 'react'
 
 export default class Login extends Component {
@@ -15,7 +16,7 @@ export default class Login extends Component {
 handleFormSubmit(event) {
 event.preventDefault();
 axios.get("/api/login", {}).then((response)=> {
-console.log("response recieved!")
+console.log("response received!")
 })
 }
 
@@ -55,12 +56,7 @@ handleInputChange(event) {
 
 ReactDOM.render(
   <>
-    <Button type="primary">Primary Button</Button>
-    <Button>Default Button</Button>
-    <Button type="dashed">Dashed Button</Button>
-    <br />
-    <Button type="text">Text Button</Button>
-    <Button type="link">Link Button</Button>
+    <Button type="primary" onClick={this.props.handleFormSubmit}>Login</Button>
   </>,
   mountNode,
 );
