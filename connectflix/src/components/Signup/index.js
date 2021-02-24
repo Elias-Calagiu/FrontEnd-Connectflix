@@ -1,23 +1,46 @@
-
+import { Button } from 'antd';
 import "./style.css";
-
+import axios from "axios"
 import React, { Component } from 'react'
 
 export default class Signup extends Component {
   constructor(props){
     super(props)
+    this.state = {
+      username: "",
+      password: "",
+      firstName:"",
+      lastName: "",
+      email: "",
+    }
   }
   // event handler method code goes here
+  handleFormSubmit(event) {
+    event.preventDefault();
+    axios.post("http://localhost8080/api/signup", {
+      username:this.state.username, 
+      password:this.state.password
+    }).then((response)=> {
+    console.log("response received!", response)
+    })
+    }
+
+    handleInputChange(event) {
+      this.setState({
+        [event.target.name]: event.target.value
+      })
+    }
+    
   render() {
     return (
       <div>
-         <form className="login-form">
+         <form className="signup-form">
         <div className="form-group">
         <label >Signup:</label>
         <input
-          value={this.props.search}
+          value={this.props.username}
           onChange={this.props.handleInputChange}
-          username="username"
+          name="username"
         //   password="password"
           type="text"
           className="form-control"
@@ -25,9 +48,9 @@ export default class Signup extends Component {
           id="username"
         />
         <input
-          value={this.props.search}
+          value={this.props.password}
           onChange={this.props.handleInputChange}
-          password="password"
+          name="password"
         //   password="password"
           type="text"
           className="form-control"
@@ -35,38 +58,38 @@ export default class Signup extends Component {
           id="password"
         />
         <input
-          value={this.props.search}
+          value={this.props.firstName}
           onChange={this.props.handleInputChange}
-          firstName="first-name"
+          name="firstName"
         //   password="password"
           type="text"
           className="form-control"
           placeholder="First Name"
-          id="first-name"
+          id="firstName"
         />
         <input
-          value={this.props.search}
+          value={this.props.lastName}
           onChange={this.props.handleInputChange}
-          lastName="last-name"
+          name="lastName"
         //   password="password"
           type="text"
           className="form-control"
           placeholder="Last Name"
-          id="last-name"
+          id="lastName"
         />
         <input
-          value={this.props.search}
+          value={this.props.email}
           onChange={this.props.handleInputChange}
-          email="email"
+          name="email"
         //   password="password"
           type="text"
           className="form-control"
           placeholder="email"
           id="email"
         />
-        <button type="submit" onClick={this.props.handleFormSubmit} className="btn btn-success">
-          Login
-        </button>
+        <>
+    <Button type="primary" onClick={this.props.handleFormSubmit}>Signup!</Button>
+  </>
       </div>
         {/* <button type="submit" onClick={this.props.handleFormSubmit} className="btn btn-success">
           Login
