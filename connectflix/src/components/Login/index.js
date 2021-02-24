@@ -15,10 +15,15 @@ export default class Login extends Component {
 
 handleFormSubmit(event) {
 event.preventDefault();
-axios.get("/api/login", {}).then((response)=> {
-console.log("response received!")
+axios.post("http://localhost8080/api/login", {
+  username:this.state.username, 
+  password:this.state.password
+}).then((response)=> {
+console.log("response received!", response)
 })
 }
+
+
 
 handleInputChange(event) {
   this.setState({
@@ -34,9 +39,9 @@ handleInputChange(event) {
         <div className="form-group">
         <label >Login:</label>
         <input
-          value={this.state.username}
+          value={this.props.username}
           onChange={this.props.handleInputChange}
-          username="username"
+          name="username"
         //   password="password"
           type="text"
           className="form-control"
@@ -44,9 +49,9 @@ handleInputChange(event) {
           id="username"
         />
         <input
-          value={this.state.password}
+          value={this.props.password}
           onChange={this.props.handleInputChange}
-          password="password"
+          name="password"
         //   password="password"
           type="text"
           className="form-control"
@@ -63,8 +68,8 @@ handleInputChange(event) {
           Login
         </button> */}
       </div>
-      <h6 class="my-mt-4">Need an Account?
-        <a class="my-tc1" href="/signup">Sign Up</a>
+      <h6 className="my-mt-4">Need an Account?
+        <a className="my-tc1" href="/signup">Sign Up</a>
       </h6>
         </form>
       </div>
