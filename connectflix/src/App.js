@@ -1,15 +1,18 @@
 import './App.css';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, } from "react-router-dom";
 import API from "./utils/API"
 import axios from "axios"
 import Login from "./components/Login"
 import Navbar from "./components/Navbar"
 import Signup from "./components/Signup"
 
+import 'antd/dist/antd.css';
+
+
 function App() {
   return (
     <div className="App">
-      <h1>ConnectFlix</h1>
+      <h1>ConNectFlix</h1>
       <Router>
         {/* <Switch> */}
           <Navbar />
