@@ -6,7 +6,26 @@ import React, { Component } from 'react'
 export default class Login extends Component {
   constructor(props){
     super(props)
+    this.state = {
+      username: "",
+      password: ""
+    }
   }
+
+handleFormSubmit(event) {
+event.preventDefault();
+axios.get("/api/login", {}).then((response)=> {
+console.log("response recieved!")
+})
+}
+
+handleInputChange(event) {
+  this.setState({
+    [event.target.name]: event.target.value
+  })
+}
+
+
   render() {
     return (
       <div>
@@ -14,7 +33,7 @@ export default class Login extends Component {
         <div className="form-group">
         <label >Login:</label>
         <input
-          value={this.props.search}
+          value={this.state.username}
           onChange={this.props.handleInputChange}
           username="username"
         //   password="password"
@@ -24,7 +43,7 @@ export default class Login extends Component {
           id="username"
         />
         <input
-          value={this.props.search}
+          value={this.state.password}
           onChange={this.props.handleInputChange}
           password="password"
         //   password="password"

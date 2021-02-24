@@ -1,1 +1,1 @@
-# project-3-connectflix
+# FrontEnd Connectflix
