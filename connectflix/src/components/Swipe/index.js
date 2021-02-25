@@ -9,7 +9,7 @@ export default class Swipe extends Component {
         error: ""
       };
     componentDidMount() {
-        API.getGenres()
+        API.getMovies()
         //   .then(res => this.setState({ movies: res.data }))
         //   .catch(err => console.log(err));
       }
