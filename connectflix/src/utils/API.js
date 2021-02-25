@@ -8,7 +8,7 @@ const options = {
     start_year: '1972',
     orderby: 'rating',
     audiosubtitle_andor: 'and',
-    limit: '100',
+    limit: '10',
     subtitle: 'english',
     countrylist: '78,46',
     audio: 'english',

@@ -19,7 +19,10 @@ export default class Signup extends Component {
     event.preventDefault();
     axios.post("http://localhost8080/api/signup", {
       username:this.state.username, 
-      password:this.state.password
+      password:this.state.password,
+      firstName:this.state.firstName,
+      lastName:this.state.lastName,
+      email:this.state.email
     }).then((response)=> {
     console.log("response received!", response)
     })
