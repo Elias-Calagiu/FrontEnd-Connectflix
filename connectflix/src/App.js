@@ -5,6 +5,7 @@ import axios from "axios"
 import Login from "./components/Login"
 import Navbar from "./components/Navbar"
 import Signup from "./components/Signup"
+import Swipe from "./components/Swipe"
 
 import 'antd/dist/antd.css';
 
@@ -19,6 +20,7 @@ function App() {
           {/* <Wrapper> */}
           <Route exact path="/" component={Login} />
           <Route exact path="/signup" component={Signup} />
+          <Route exact path="/swipe" component={Swipe} />
           {/* <Route exact path="/genres" component={Genres} />
           <Route exact path="/discover" component={Discover} />
           <Route exact path="/search" component={Search} /> */}
