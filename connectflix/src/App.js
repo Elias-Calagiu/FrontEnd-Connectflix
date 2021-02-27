@@ -6,7 +6,8 @@ import Login from "./components/Login"
 import Navbar from "./components/Navbar"
 import Signup from "./components/Signup"
 import Swipe from "./components/Swipe"
-import Genre from './components/Genre';
+import Genre from './components/Genre'
+import Match from "./components/Match"
 import 'antd/dist/antd.css';
 
 
@@ -22,6 +23,8 @@ function App() {
           <Route exact path="/signup" component={Signup} />
           <Route exact path="/swipe" component={Swipe} />
           <Route exact path="/genre" component={Genre} />
+          {/* <Route exact path="/match" component={Match} /> */}
+          
           {/* <Route exact path="/genres" component={Genres} />
           <Route exact path="/discover" component={Discover} />
           <Route exact path="/search" component={Search} /> */}

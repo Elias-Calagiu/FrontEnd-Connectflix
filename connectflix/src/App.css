@@ -2,6 +2,13 @@
   text-align: center;
 }
 
+/* h1 {
+  background-color: darkorange;
+  margin-top: auto;
+  padding-top: 20px;
+  color: #61dafb;
+} */
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
