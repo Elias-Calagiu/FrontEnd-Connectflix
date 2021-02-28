@@ -2,7 +2,7 @@ import React from "react"
 import axios from "axios";
 const URL_PREFIX = "http://localhost:8080"
 
-export default{
+export default {
   getGenres: function(){
     const options = {
       method: 'GET',
@@ -13,14 +13,14 @@ export default{
       }
     };
     
-    axios.request(options).then(function (response) {
+    return axios.request(options).then(function (response) {
       console.log(response.data);
     }).catch(function (error) {
       console.error(error);
     });
   },
 
-  getMovies: function(){
+  getMovies(){
     const options = {
         method: 'GET',
         url: 'https://unogsng.p.rapidapi.com/search',
@@ -42,12 +42,13 @@ export default{
         }
       };
       
-      axios.request(options).then(function (response) {
-      	console.log(response.data);
+      return axios.request(options)
+      // .then(function (response) {
+      // 	console.log(response.data);
        
-      }).catch(function (error) {
-      	console.error(error);
-      });
+      // }).catch(function (error) {
+      // 	console.error(error);
+      // });
   }
 }
 
