@@ -4,13 +4,24 @@ import API from "../../utils/API"
 import {Card} from "antd"
 // import Card from "../Card"
 export default class Swipe extends Component {
-    state = {
-        search: "",
-        movies: [],
-        results: [],
-        image: "",
-        error: ""
-      };
+    constructor(props){
+        super(props)
+        var movieObject = {
+            title: "test",
+            poster: "https://images-na.ssl-images-amazon.com/images/M/MV5BMTAzMjAwNzc1MzVeQTJeQWpwZ15BbW",
+            imdb: "imdb",
+            synopsis: "synopsis",
+            
+        }
+        this.state = {
+            search: "",
+            movies: [movieObject],
+            results: [],
+            image: "",
+            error: ""
+          };
+    }
+   
     componentDidMount = ()=> {
         API.getMovies()
         // console.log(API.getMovies());
@@ -47,8 +58,12 @@ export default class Swipe extends Component {
         // Clone this.state to the newState object
         // We'll modify this object and use it to set our component's state
         const newState = { ...this.state };
-        console.log(btnType);
-
+        // console.log(this.state);
+        var movieState= this.state.movies.shift()
+        console.log(movieState);
+        this.setState({
+            movies: this.state.movies
+        })
         if (btnType === "pick") {
           // Set newState.match to either true or false depending on whether or not the dog likes us (1/5 chance)
         //   newState.match = 1 === Math.floor(Math.random() * 5) + 1;
@@ -100,6 +115,10 @@ export default class Swipe extends Component {
                 // }}
                 
             >
+                <p>{this.state.movies[0].title}</p>
+                <img src={this.state.movies[0].poster}/>
+                <p>{this.state.movies[0].imdb}</p>
+                <p>{this.state.movies[0].synopsis}</p>
                 {!this.props.image && <i className="fa fa-spinner fa-spin" aria-hidden="true" />}
                 <CardBtn
                     onClick={this.handleBtnClick}

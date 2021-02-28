@@ -3,7 +3,7 @@ import CardBtn from "../CardBtn";
 import "./style.css";
 import API from "../../utils/API"
 
-import React, { Component } from 'react'
+// import React, { Component } from 'react'
 
 export default class Card extends Component {
 
