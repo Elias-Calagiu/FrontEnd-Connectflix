@@ -79,7 +79,8 @@ export default class Swipe extends Component {
             var movieState= this.state.movies.shift()
             console.log(movieState);
             if (btnType === "pick") {
-                axios.post("/api/likes", movieState)
+                // 
+                axios.post("http://localhost:8080/api/likes", movieState)
                
             };
             this.setState({
