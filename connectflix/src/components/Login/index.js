@@ -13,19 +13,20 @@ export default class Login extends Component {
     }
   }
 
-handleFormSubmit(event) {
+handleFormSubmit = (event) => {
 event.preventDefault();
-axios.post("http://localhost8080/api/login", {
+axios.post("http://localhost:8080/api/login", {
   username:this.state.username, 
   password:this.state.password
 }).then((response)=> {
 console.log("response received!", response)
+window.location.href = "/swipe"
 })
 }
 
 
 
-handleInputChange(event) {
+handleInputChange = (event) => {
   this.setState({
     [event.target.name]: event.target.value
   })
@@ -39,8 +40,8 @@ handleInputChange(event) {
         <div className="form-group">
         <label >Login:</label>
         <input
-          value={this.props.username}
-          onChange={this.props.handleInputChange}
+          value={this.state.username}
+          onChange={this.handleInputChange}
           name="username"
         //   password="password"
           type="text"
@@ -49,8 +50,8 @@ handleInputChange(event) {
           id="username"
         />
         <input
-          value={this.props.password}
-          onChange={this.props.handleInputChange}
+          value={this.state.password}
+          onChange={this.handleInputChange}
           name="password"
         //   password="password"
           type="text"
@@ -61,10 +62,10 @@ handleInputChange(event) {
 
 
   <>
-    <Button type="primary" onClick={this.props.handleFormSubmit}>Login</Button>
+    <Button type="primary" onClick={this.handleFormSubmit}>Login</Button>
   </>
 
-        {/* <button type="submit" onClick={this.props.handleFormSubmit} className="btn btn-success">
+        {/* <button type="submit" onClick={this.state.handleFormSubmit} className="btn btn-success">
           Login
         </button> */}
       </div>

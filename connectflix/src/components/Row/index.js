@@ -5,8 +5,3 @@ function Row(props) {
 }
 
 export default Row;
-
-// frontend port: 3000
-// backend port: 8080
-
-// http://localhost8080/whateverrouteyouretryingtoconnectto 

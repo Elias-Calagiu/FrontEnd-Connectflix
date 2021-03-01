@@ -12,12 +12,14 @@ export default class Signup extends Component {
       firstName:"",
       lastName: "",
       email: "",
+      redirect: null
     }
   }
   // event handler method code goes here
-  handleFormSubmit(event) {
+  handleFormSubmit = (event) => {
+    console.log("hitting form submit");
     event.preventDefault();
-    axios.post("http://localhost8080/api/signup", {
+    axios.post("http://localhost:8080/api/signup", {
       username:this.state.username, 
       password:this.state.password,
       firstName:this.state.firstName,
@@ -25,10 +27,11 @@ export default class Signup extends Component {
       email:this.state.email
     }).then((response)=> {
     console.log("response received!", response)
+      window.location.href = "/"
     })
     }
 
-    handleInputChange(event) {
+    handleInputChange = (event)=> {
       this.setState({
         [event.target.name]: event.target.value
       })
@@ -41,8 +44,8 @@ export default class Signup extends Component {
         <div className="form-group">
         <label >Signup:</label>
         <input
-          value={this.props.username}
-          onChange={this.props.handleInputChange}
+          value={this.state.username}
+          onChange={this.handleInputChange}
           name="username"
         //   password="password"
           type="text"
@@ -51,8 +54,8 @@ export default class Signup extends Component {
           id="username"
         />
         <input
-          value={this.props.password}
-          onChange={this.props.handleInputChange}
+          value={this.state.password}
+          onChange={this.handleInputChange}
           name="password"
         //   password="password"
           type="text"
@@ -61,8 +64,8 @@ export default class Signup extends Component {
           id="password"
         />
         <input
-          value={this.props.firstName}
-          onChange={this.props.handleInputChange}
+          value={this.state.firstName}
+          onChange={this.handleInputChange}
           name="firstName"
         //   password="password"
           type="text"
@@ -71,8 +74,8 @@ export default class Signup extends Component {
           id="firstName"
         />
         <input
-          value={this.props.lastName}
-          onChange={this.props.handleInputChange}
+          value={this.state.lastName}
+          onChange={this.handleInputChange}
           name="lastName"
         //   password="password"
           type="text"
@@ -81,8 +84,8 @@ export default class Signup extends Component {
           id="lastName"
         />
         <input
-          value={this.props.email}
-          onChange={this.props.handleInputChange}
+          value={this.state.email}
+          onChange={this.handleInputChange}
           name="email"
         //   password="password"
           type="text"
@@ -91,7 +94,7 @@ export default class Signup extends Component {
           id="email"
         />
         <>
-    <Button type="primary" onClick={this.props.handleFormSubmit}>Signup!</Button>
+    <Button type="primary" onClick={this.handleFormSubmit}>Signup!</Button>
   </>
       </div>
         {/* <button type="submit" onClick={this.props.handleFormSubmit} className="btn btn-success">
