@@ -4,22 +4,29 @@ const URL_PREFIX = "http://localhost:8080"
 
 export default {
   getGenres: function(){
-    const options = {
-      method: 'GET',
-      url: 'https://unogsng.p.rapidapi.com/genres',
-      headers: {
-        'x-rapidapi-key': 'cf26f75fedmsh908d182a13ab0aap13e5dejsn966016d6915d',
-        'x-rapidapi-host': 'unogsng.p.rapidapi.com'
-      }
-    };
-    
-    return axios.request(options).then(function (response) {
-      console.log(response.data);
-    }).catch(function (error) {
-      console.error(error);
-    });
+
+const options = {
+  method: 'GET',
+  url: 'https://unogsng.p.rapidapi.com/search',
+  params: {
+    genrelist: '5505',
+    limit: '10', 
+    countrylist: '78,46'
+  },
+  headers: {
+    'x-rapidapi-key': 'cf26f75fedmsh908d182a13ab0aap13e5dejsn966016d6915d',
+    'x-rapidapi-host': 'unogsng.p.rapidapi.com'
+  }
+};
+
+axios.request(options).then(function (response) {
+	console.log(response.data);
+}).catch(function (error) {
+	console.error(error);
+});
   },
 
+  
   getMovies(){
     const options = {
         method: 'GET',
