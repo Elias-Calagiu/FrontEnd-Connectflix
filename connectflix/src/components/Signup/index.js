@@ -12,6 +12,7 @@ export default class Signup extends Component {
       firstName:"",
       lastName: "",
       email: "",
+      token: "",
       redirect: null
     }
   }
@@ -24,10 +25,15 @@ export default class Signup extends Component {
       password:this.state.password,
       firstName:this.state.firstName,
       lastName:this.state.lastName,
-      email:this.state.email
+      email:this.state.email,
+      token: this.state.token
     }).then((response)=> {
     console.log("response received!", response)
+    localStorage.setItem("token", response.data.token)
       window.location.href = "/"
+    }).catch(err=>{
+      console.log(err);
+      localStorage.removeItem("token")
     })
     }
 
