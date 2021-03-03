@@ -59,30 +59,17 @@ export default class Swipe extends Component {
         // Clone this.state to the newState object
         // We'll modify this object and use it to set our component's state
         const newState = { ...this.state };
-        // console.log(this.state);
-
-       
-        //   loadNextMovie = () => {
-        //     API.getMovies()
-        //       .then(res =>
-        //         this.setState({
-        //           image: res.data.results[0].poster
-        //         })
-        //       )
-        //       .catch(err => console.log(err));
-        //   };
-        //   handleInputChange = event => {
-        //     this.setState({ search: event.target.value });
-        //   };
 
         if (this.state.movies.length > 1) {
+            // set a counter and loop through it
+            // find a more react way to pop the first object in the array
             var movieState= this.state.movies.shift()
             console.log(movieState);
             if (btnType === "pick") {
                 // 
-                axios.post("http://localhost:8080/api/likes", movieState)
-               
-            };
+                axios.post("http://localhost:8080/api/likes", movieState).then(data=>console.log(data)).catch(err=>console.log(err))
+            }
+            
             this.setState({
                 movies: this.state.movies
             })

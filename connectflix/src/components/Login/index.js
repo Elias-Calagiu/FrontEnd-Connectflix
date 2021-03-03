@@ -9,7 +9,9 @@ export default class Login extends Component {
     super(props)
     this.state = {
       username: "",
-      password: ""
+      password: "",
+      token:"",
+      // isLoggedin: false
     }
   }
 
@@ -17,10 +19,16 @@ handleFormSubmit = (event) => {
 event.preventDefault();
 axios.post("http://localhost:8080/api/login", {
   username:this.state.username, 
-  password:this.state.password
+  password:this.state.password,
+  token:this.state.token,
+  // isLoggedin: true
 }).then((response)=> {
+  localStorage.setItem("token", response.data.token)
 console.log("response received!", response)
 window.location.href = "/swipe"
+}).catch(err=>{
+  console.log(err);
+  localStorage.removeItem("token")
 })
 }
 
