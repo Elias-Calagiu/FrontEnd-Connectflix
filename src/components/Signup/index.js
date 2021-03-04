@@ -9,8 +9,8 @@ export default class Signup extends Component {
     this.state = {
       username: "",
       password: "",
-      firstName:"",
-      lastName: "",
+      first_name:"",
+      last_name: "",
       email: "",
       token: "",
       redirect: null
@@ -23,8 +23,8 @@ export default class Signup extends Component {
     axios.post("http://localhost:8080/api/signup", {
       username:this.state.username, 
       password:this.state.password,
-      firstName:this.state.firstName,
-      lastName:this.state.lastName,
+      first_name:this.state.first_name,
+      last_name:this.state.last_name,
       email:this.state.email,
       token: this.state.token
     }).then((response)=> {

@@ -70,10 +70,14 @@ export default class Friends extends Component {
     render() {
         return (
             <div>
-                <p>{this.state.Friend[0].id}</p>
-                <p>{this.state.Friend[0].username}</p>
-                <p>{this.state.Friend[0].first_name}</p>
-                <p>{this.state.Friend[0].last_name}</p>
+                {this.state.Friend.map(friendOBJ=>(
+                    console.log("",friendOBJ),
+                    friendOBJ.id,
+                    friendOBJ.username,
+                    friendOBJ.first_name,
+                    friendOBJ.last_name
+                ))}
+                
                 <CardBtn
                     onClick={this.handleBtnClick}
                     data-value="find-friends"

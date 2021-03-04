@@ -1,8 +1,7 @@
-import React, {useState, useEffect} from "react"
+import React from "react"
+import CssBaseline from '@material-ui/core/CssBaseline';
 import './App.css';
 import { BrowserRouter as Router, Route, } from "react-router-dom";
-import API from "./utils/API"
-import axios from "axios"
 import Login from "./components/Login"
 import Navbar from "./components/Navbar"
 import Signup from "./components/Signup"
@@ -10,12 +9,15 @@ import Swipe from "./components/Swipe"
 import Genre from './components/Genre'
 import Friends from './components/Friends'
 import Match from "./components/Match"
-import 'antd/dist/antd.css';
+import 'fontsource-roboto';
+// import Button from '@material-ui/core/Button';
 
 
 function App() {
   return (
-    <div className="App">
+    <React.Fragment>
+      <CssBaseline />
+      <div className="App">
       <h1>ConNectFlix</h1>
       <Router>
           <Navbar />
@@ -29,6 +31,8 @@ function App() {
 
 
     </div>
+    </React.Fragment>
+   
   );
 }
 
