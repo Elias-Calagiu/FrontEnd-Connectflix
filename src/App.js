@@ -18,22 +18,13 @@ function App() {
     <div className="App">
       <h1>ConNectFlix</h1>
       <Router>
-        {/* <Switch> */}
           <Navbar />
-          {/* <Wrapper> */}
           <Route exact path="/" component={Login} />
           <Route exact path="/signup" component={Signup} />
           <Route exact path="/friends" component={Friends} />
           <Route exact path="/swipe" component={Swipe} />
           <Route exact path="/genre" component={Genre} />
           {/* <Route exact path="/match" component={Match} /> */}
-          
-          {/* <Route exact path="/genres" component={Genres} />
-          <Route exact path="/discover" component={Discover} />
-          <Route exact path="/search" component={Search} /> */}
-          {/* </Wrapper> */}
-          {/* <Footer /> */}
-        {/* </Switch>   */}
           </Router>
 
 
