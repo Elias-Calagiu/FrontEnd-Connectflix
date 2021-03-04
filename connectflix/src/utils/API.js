@@ -3,6 +3,10 @@ import axios from "axios";
 const URL_PREFIX = "http://localhost:8080"
 
 export default {
+  getUsers: function(){
+    return axios.get(URL_PREFIX+"/api/users")
+  },
+
   getGenres: function(){
 
 const options = {

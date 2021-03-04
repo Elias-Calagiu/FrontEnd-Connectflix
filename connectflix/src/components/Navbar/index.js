@@ -10,36 +10,36 @@ function Navbar() {
         ConNectFlix
       </Link>
       <div>
-        {/* <ul className="navbar-nav">
+        <ul className="navbar-nav">
           <li className="nav-item">
             <Link
               to="/"
               className={
-                window.location.pathname === "/" || window.location.pathname === "/about"
+                window.location.pathname === "/" || window.location.pathname === "/login"
                   ? "nav-link active"
                   : "nav-link"
               }
             >
-              About
+              Login
             </Link>
           </li>
           <li className="nav-item">
             <Link
-              to="/discover"
-              className={window.location.pathname === "/discover" ? "nav-link active" : "nav-link"}
+              to="/friends"
+              className={window.location.pathname === "/friends" ? "nav-link active" : "nav-link"}
             >
-              Discover
+              Friends
             </Link>
-          </li>
+          </li> 
           <li className="nav-item">
             <Link
-              to="/search"
-              className={window.location.pathname === "/search" ? "nav-link active" : "nav-link"}
+              to="/swipe"
+              className={window.location.pathname === "/swipe" ? "nav-link active" : "nav-link"}
             >
-              Search
+              Swipe
             </Link>
           </li>
-        </ul> */}
+        </ul> 
       </div>
     </nav>
   );
