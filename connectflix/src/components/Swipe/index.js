@@ -8,10 +8,10 @@ export default class Swipe extends Component {
     constructor(props) {
         super(props)
         var movieObject = {
-            title: "test",
-            poster: "https://images-na.ssl-images-amazon.com/images/M/MV5BMTAzMjAwNzc1MzVeQTJeQWpwZ15BbW",
-            imdb: "imdb",
-            synopsis: "synopsis",
+            title: "",
+            poster: "",
+            imdb: [],
+            synopsis: "",
 
         }
         this.state = {
@@ -19,14 +19,22 @@ export default class Swipe extends Component {
             movies: [movieObject],
             results: [],
             image: "",
-            error: ""
+            error: "",
+            token: ""
         };
     }
 
     componentDidMount = () => {
+        const token = localStorage.getItem("token")
+        if(token){
+            this.setState({
+                token: token
+            })
+        }
         API.getMovies()
             // console.log(API.getMovies());
             .then(response => {
+                // log entire response to see if there is an id for the movie we can match together to record users liked the same movie
                 console.log(this.state.movies);
                 for (let i = 0; i < response.data.results.length; i++) {
                     var movieObject = {
@@ -66,7 +74,8 @@ export default class Swipe extends Component {
             var movieState= this.state.movies.shift()
             console.log(movieState);
             if (btnType === "pick") {
-                // 
+                axios.defaults.headers.common["Authorization"] = `Bearer ${this.state.token}`;
+
                 axios.post("http://localhost:8080/api/likes", movieState).then(data=>console.log(data)).catch(err=>console.log(err))
             }
             
