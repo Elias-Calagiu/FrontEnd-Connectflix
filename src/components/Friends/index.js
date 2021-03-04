@@ -26,7 +26,7 @@ export default class Friends extends Component {
                 token: token
             })
         }
-        var friendState = this.state.Friend
+        // var friendState = this.state.Friend
         API.getUsers()
         .then(response => {
             console.log(this.state.Friend);
