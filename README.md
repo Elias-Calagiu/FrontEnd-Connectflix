@@ -34,6 +34,7 @@ Social app allowing users to quickly arrive at a movie both parties are interest
 [Deployment on Heroku](https://uw-meets.herokuapp.com/)
 
 1. Signup Screen
+
 ![Screenshot](https://raw.githubusercontent.com/Elias-Calagiu/FrontEnd-Connectflix/dev/signup%20page%20connectflix.PNG)
 
 
@@ -44,6 +45,7 @@ Social app allowing users to quickly arrive at a movie both parties are interest
 
 
 *Click login button after entering created user's info and app will log the user in to the app.
+
 
 2. Movie Swipe
 ![Screenshot](https://raw.githubusercontent.com/Elias-Calagiu/FrontEnd-Connectflix/dev/Swipe%20page%20connectflix.PNG)
@@ -61,7 +63,6 @@ Social app allowing users to quickly arrive at a movie both parties are interest
 
 
 ![Screenshot](https://i.imgur.com/Y0wZJvK.png)
-
 
 
 ## Technologies
