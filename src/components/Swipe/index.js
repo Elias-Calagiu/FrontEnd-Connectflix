@@ -76,8 +76,10 @@ export default class Swipe extends Component {
             console.log(movieState);
             if (btnType === "pick") {
                 axios.defaults.headers.common["Authorization"] = `Bearer ${this.state.token}`;
-
-                axios.post("http://localhost:8080/api/likes", movieState).then(data=>console.log(data)).catch(err=>console.log(err))
+                
+                axios.post("http://localhost:8080/api/likes", movieState).then(
+                    // only working for two users who must be friends with each other 
+                    data=>).catch(err=>console.log(err))
             }
             
             this.setState({

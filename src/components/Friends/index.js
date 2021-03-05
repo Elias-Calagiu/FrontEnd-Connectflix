@@ -2,12 +2,13 @@ import React, { Component } from 'react'
 import CardBtn from "../CardBtn"
 import API from "../../utils/API"
 import axios from 'axios'
+import FriendCard from '../FriendCard'
 
 export default class Friends extends Component {
     constructor(props){
         super(props)
         var friendObject = {
-            FriendId: [1],
+            id: 0,
             username: "eli",
             first_name: "eli",
             last_name: "cala"
@@ -32,7 +33,7 @@ export default class Friends extends Component {
             console.log(this.state.Friend);
             for (let i = 0; i < response.data.length; i++) {
                 var friendObject = {
-                    FriendId: response.data[i].id,
+                    id: response.data[i].id,
                     username: response.data[i].username,
                     first_name: response.data[i].first_name,
                     last_name: response.data[i].last_name,
@@ -67,15 +68,29 @@ export default class Friends extends Component {
     //         console.log("no friends lol");  
     //     }
     // } 
+    addFriend=(id)=>{
+        console.log(id);
+        axios.defaults.headers.common["Authorization"] = `Bearer ${this.state.token}`;
+
+
+        axios.put("http://localhost:8080/api/addFriend", {
+            friendId: id,
+            token: this.state.token
+        })
+    }
     render() {
         return (
             <div>
                 {this.state.Friend.map(friendOBJ=>(
-                    console.log("",friendOBJ),
-                    friendOBJ.id,
-                    friendOBJ.username,
-                    friendOBJ.first_name,
-                    friendOBJ.last_name
+                    // console.log("",friendOBJ),
+                    <FriendCard
+                    id={friendOBJ.id}
+                    key={friendOBJ.id}
+                    username={friendOBJ.username}
+                    first_name={friendOBJ.first_name}
+                    last_name={friendOBJ.last_name}
+                    addFriend={this.addFriend}
+                    />
                 ))}
                 
                 <CardBtn

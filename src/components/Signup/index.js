@@ -70,24 +70,24 @@ export default class Signup extends Component {
           id="password"
         />
         <input
-          value={this.state.firstName}
+          value={this.state.first_name}
           onChange={this.handleInputChange}
-          name="firstName"
+          name="first_name"
         //   password="password"
           type="text"
           className="form-control"
           placeholder="First Name"
-          id="firstName"
+          id="first_name"
         />
         <input
-          value={this.state.lastName}
+          value={this.state.last_name}
           onChange={this.handleInputChange}
-          name="lastName"
+          name="last_name"
         //   password="password"
           type="text"
           className="form-control"
           placeholder="Last Name"
-          id="lastName"
+          id="last_name"
         />
         <input
           value={this.state.email}
