@@ -1,7 +1,9 @@
-# FrontEnd Connectflix
+# ConNectFlix
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://choosealicense.com/licenses/mit/)
 
 Social app allowing users to quickly arrive at a movie both parties are interested in viewing. 
+
+*Current build only allows for association between two users as Friend through UserFriend table who must add each other as friends individually. 
 
 ## Table of Contents
 * [Developers](#developers)
@@ -32,31 +34,42 @@ Social app allowing users to quickly arrive at a movie both parties are interest
 [Deployment on Heroku](https://uw-meets.herokuapp.com/)
 
 1. Signup Screen
-![Screenshot](https://i.imgur.com/tcIoVIe.png)
 
-1. Login Screen
-![Screenshot](https://i.imgur.com/tcIoVIe.png)
+![Screenshot](https://raw.githubusercontent.com/Elias-Calagiu/FrontEnd-Connectflix/dev/signup%20page%20connectflix.PNG)
+
+
+*Not sure what's gone wrong, I had a button until one of my commits at about midnight March 5th, but it's gone now. Pressing enter will submit the form and create user in database, however. 
+
+2. Login Screen
+![Screenshot](https://raw.githubusercontent.com/Elias-Calagiu/FrontEnd-Connectflix/dev/login%20screen%20connectflix.PNG)
+
+
+*Click login button after entering created user's info and app will log the user in to the app.
+
 
 2. Movie Swipe
-![Screenshot](https://i.imgur.com/CbgzOT2.png)
+![Screenshot](https://raw.githubusercontent.com/Elias-Calagiu/FrontEnd-Connectflix/dev/Swipe%20page%20connectflix.PNG)
 
-3. Event Creation
-![Screenshot](https://i.imgur.com/4Ede66M.png)
 
-4. Connections
+*Click red dislike button to loop through movie array fetched from API. Clicking green button will insert that movie's onject into databse binding it to the logged in user's ID.
+
+3. Friends Page
+![Screenshot](https://raw.githubusercontent.com/Elias-Calagiu/FrontEnd-Connectflix/dev/friends%20page%20connectflix.PNG)
+
+
+*Navigate to this page by clicking friends in the navbar. On mount, this component will render every user in the database. Click the add friend button to create an association between you and the chosen user.
+
+4. Logging User's Friends and those Friend's Liked Movies
+
+
 ![Screenshot](https://i.imgur.com/Y0wZJvK.png)
 
-5. A.I. Chat
-![Screenshot](https://i.imgur.com/0Ssk7qL.png)
-
-6. User Settings
-![Screenshot](https://i.imgur.com/lZZPkrn.png)
 
 ## Technologies
 #### Frontend: 
-React, Material-UI
+React, Material-UI, JWT
 #### Backend: 
-NodeJS, Express, Bcrypt, Sequelize, JAWSDB
+NodeJS, Express, Bcrypt, Sequelize, JAWSDB, uNoGS API, JWT
 #### Languages:
 ![javascript](https://img.shields.io/badge/javascript-97.4%25-yellow)
 ![html](https://img.shields.io/badge/handlebars-1.7%25-blue)
