@@ -31,7 +31,10 @@ Social app allowing users to quickly arrive at a movie both parties are interest
 ## Product
 [Deployment on Heroku](https://uw-meets.herokuapp.com/)
 
-<!-- 1. Login Screen
+1. Signup Screen
+![Screenshot](https://i.imgur.com/tcIoVIe.png)
+
+1. Login Screen
 ![Screenshot](https://i.imgur.com/tcIoVIe.png)
 
 2. Movie Swipe
@@ -47,7 +50,7 @@ Social app allowing users to quickly arrive at a movie both parties are interest
 ![Screenshot](https://i.imgur.com/0Ssk7qL.png)
 
 6. User Settings
-![Screenshot](https://i.imgur.com/lZZPkrn.png) -->
+![Screenshot](https://i.imgur.com/lZZPkrn.png)
 
 ## Technologies
 #### Frontend: 

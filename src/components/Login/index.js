@@ -2,7 +2,7 @@
 import axios from "axios"
 import "./style.css";
 import React, { Component } from 'react'
-import CardBtn from "../CardBtn"
+import CardBtn from "../SwipeCardBtn"
 import Button from '@material-ui/core/Button';
 
 
@@ -75,9 +75,9 @@ handleInputChange = (event) => {
         </CardBtn>
  
 
-        {/* <button type="submit" onClick={this.state.handleFormSubmit} className="btn btn-success">
+        <button type="submit" onClick={this.handleFormSubmit} className="btn btn-success">
           Login
-        </button> */}
+        </button>
       </div>
       <h6 className="my-mt-4">Need an Account?
         <a className="my-tc1" href="/signup">Sign Up</a>

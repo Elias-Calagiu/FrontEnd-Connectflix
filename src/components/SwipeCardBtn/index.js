@@ -3,11 +3,13 @@ import Fab from '@material-ui/core/Fab';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import "./style.css";
 
-function CardBtn(props) {
+function SwipeCardBtn(props) {
   return (
     <div>
-      <button className="card-btn"
+      <button
       onClick={props.onClick} 
+    className={`card-btn ${props["data-value"]}`} 
+    data-value={props["data-value"]} 
     />
     </div>
     
@@ -19,4 +21,4 @@ function CardBtn(props) {
   );
 }
 
-export default CardBtn;
+export default SwipeCardBtn;
