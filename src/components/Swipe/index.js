@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import CardBtn from "../CardBtn"
 import API from "../../utils/API"
-import { Card } from "antd"
 import axios from 'axios'
-import Button from '@material-ui/core/Button';
+// import {Button} from '@material-ui/core/Button';
+// import { response } from 'express'
 // import Card from "../Card"
 export default class Swipe extends Component {
     constructor(props) {
@@ -76,10 +76,19 @@ export default class Swipe extends Component {
             console.log(movieState);
             if (btnType === "pick") {
                 axios.defaults.headers.common["Authorization"] = `Bearer ${this.state.token}`;
-
-                axios.post("http://localhost:8080/api/likes", movieState).then(
-                    // only working for two users who must be friends with each other 
-                    data=>{}).catch(err=>console.log(err))
+                
+                axios.post("http://localhost:8080/api/likes", movieState).then(data=>console.log(data)).catch(err=>console.log(err))
+                // axios request to retrieve all logged in user's friend's and the movies those friends liked
+                API.getUserFriendLikes()
+                .then(response =>{
+                    console.log(response.data[0].Friend[0].Likes[1].title);
+                    for (let i = 0; i < response.data[0].Friend[0].Likes.length; i++) {
+                        if(movieState===response.data[0].Friend[0].Likes[i].title){
+                          alert("IT'S A MATCH")
+                        }
+                }
+            })
+                
             }
             
             this.setState({

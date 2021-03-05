@@ -3,6 +3,11 @@ import axios from "axios";
 const URL_PREFIX = "http://localhost:8080"
 
 export default {
+
+  getUserFriendLikes(){
+    return axios.get(URL_PREFIX+"/api/userFriendLikes")
+  },
+
   getUsers: function(){
     return axios.get(URL_PREFIX+"/api/users")
   },

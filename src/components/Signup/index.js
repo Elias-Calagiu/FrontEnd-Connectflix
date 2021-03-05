@@ -1,7 +1,8 @@
-import { Button } from 'antd';
 import "./style.css";
 import axios from "axios"
 import React, { Component } from 'react'
+import CardBtn from "../CardBtn"
+
 
 export default class Signup extends Component {
   constructor(props){
@@ -100,7 +101,11 @@ export default class Signup extends Component {
           id="email"
         />
         <>
-    <Button type="primary" onClick={this.handleFormSubmit}>Signup!</Button>
+        <CardBtn
+        onClick={this.handleFormSubmit}>Signup!
+        </CardBtn>
+                
+    {/* <Button type="primary" onClick={this.handleFormSubmit}>Signup!</Button> */}
   </>
       </div>
         {/* <button type="submit" onClick={this.props.handleFormSubmit} className="btn btn-success">

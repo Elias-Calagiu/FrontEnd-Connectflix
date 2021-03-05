@@ -1,8 +1,10 @@
 // import React from "react";
 import axios from "axios"
 import "./style.css";
-import { Button } from 'antd';
 import React, { Component } from 'react'
+import CardBtn from "../CardBtn"
+import Button from '@material-ui/core/Button';
+
 
 export default class Login extends Component {
   constructor(props){
@@ -68,10 +70,10 @@ handleInputChange = (event) => {
           id="password"
         />
 
-
-  <>
-    <Button type="primary" onClick={this.handleFormSubmit}>Login</Button>
-  </>
+<CardBtn
+        onClick={this.handleFormSubmit}>Login!
+        </CardBtn>
+ 
 
         {/* <button type="submit" onClick={this.state.handleFormSubmit} className="btn btn-success">
           Login
