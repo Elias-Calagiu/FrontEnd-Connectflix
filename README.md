@@ -38,7 +38,7 @@ Social app allowing users to quickly arrive at a movie both parties are interest
 *Not sure what's gone wrong, I had a button until one of my commits at about midnight March 5th, but it's gone now. Pressing enter will submit the form and create user in database, however. 
 
 2. Login Screen
-![Screenshot](https://raw.githubusercontent.com/Elias-Calagiu/FrontEnd-Connectflix/dev/signup%20page%20connectflix.PNG)
+![Screenshot](https://raw.githubusercontent.com/Elias-Calagiu/FrontEnd-Connectflix/dev/login%20screen%20connectflix.PNG)
 *Not sure what's gone wrong, I had a button until one of my commits at about midnight March 5th, but it's gone now. Pressing enter will submit the form and log the user in to the app, however. 
 
 2. Movie Swipe
