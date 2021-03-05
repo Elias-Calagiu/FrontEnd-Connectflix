@@ -42,9 +42,10 @@ Social app allowing users to quickly arrive at a movie both parties are interest
 *Not sure what's gone wrong, I had a button until one of my commits at about midnight March 5th, but it's gone now. Pressing enter will submit the form and log the user in to the app, however. 
 
 2. Movie Swipe
-![Screenshot](https://i.imgur.com/CbgzOT2.png)
+![Screenshot](https://raw.githubusercontent.com/Elias-Calagiu/FrontEnd-Connectflix/dev/Swipe%20page%20connectflix.PNG)
+*Click red dislike button to loop through movie array fetched from API. Clicking green button will insert that movie's onject into databse binding it to the logged in user's ID.
 
-3. Event Creation
+3. Friends Page
 ![Screenshot](https://i.imgur.com/4Ede66M.png)
 
 4. Connections
