@@ -54,6 +54,8 @@ Social app allowing users to quickly arrive at a movie both parties are interest
 *Click red dislike button to loop through movie array fetched from API. Clicking green button will insert that movie's onject into databse binding it to the logged in user's ID.
 
 3. Friends Page
+
+
 ![Screenshot](https://raw.githubusercontent.com/Elias-Calagiu/FrontEnd-Connectflix/dev/friends%20page%20connectflix.PNG)
 
 
@@ -64,7 +66,7 @@ Social app allowing users to quickly arrive at a movie both parties are interest
 
 ![Screenshot](https://raw.githubusercontent.com/Elias-Calagiu/FrontEnd-Connectflix/dev/logging%20user's%20friend's%20liked%20movies.PNG)
 
-*Haven't yet been able to figure out how to handle the promises in order to post movie object to like model in database and then compare that to the array of movie's your friend has already liked in order to create a movie match.
+*Haven't yet been able to figure out how to handle the promises in order to post movie object to like model in database and then compare that to the array of movies your friend has already liked in order to create a movie match.
 
 
 ## Technologies
