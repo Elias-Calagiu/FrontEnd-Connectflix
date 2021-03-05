@@ -1,4 +1,4 @@
-# FrontEnd Connectflix
+# ConNectFlix
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://choosealicense.com/licenses/mit/)
 
 Social app allowing users to quickly arrive at a movie both parties are interested in viewing. 
