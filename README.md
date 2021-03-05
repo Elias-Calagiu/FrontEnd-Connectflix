@@ -3,6 +3,8 @@
 
 Social app allowing users to quickly arrive at a movie both parties are interested in viewing. 
 
+*Current build only allows for association between two users as Friend through UserFriend table who must add each other as friends individually. 
+
 ## Table of Contents
 * [Developers](#developers)
 * [Features](#features)
