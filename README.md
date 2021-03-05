@@ -62,7 +62,9 @@ Social app allowing users to quickly arrive at a movie both parties are interest
 4. Logging User's Friends and those Friend's Liked Movies
 
 
-![Screenshot](https://i.imgur.com/Y0wZJvK.png)
+![Screenshot](https://raw.githubusercontent.com/Elias-Calagiu/FrontEnd-Connectflix/dev/logging%20user's%20friend's%20liked%20movies.PNG)
+
+*Haven't yet been able to figure out how to handle the promises in order to post movie object to like model in database and then compare that to the array of movie's your friend has already liked in order to create a movie match.
 
 
 ## Technologies
