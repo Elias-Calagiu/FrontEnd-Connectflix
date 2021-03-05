@@ -53,7 +53,7 @@ Social app allowing users to quickly arrive at a movie both parties are interest
 #### Frontend: 
 React, Material-UI
 #### Backend: 
-NodeJS, Express, Bcrypt, Sequelize, JAWSDB
+NodeJS, Express, Bcrypt, Sequelize, JAWSDB, uNoGS API
 #### Languages:
 ![javascript](https://img.shields.io/badge/javascript-97.4%25-yellow)
 ![html](https://img.shields.io/badge/handlebars-1.7%25-blue)
